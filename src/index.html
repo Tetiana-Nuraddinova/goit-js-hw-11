@@ -2,22 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
-
+    <form class="form" id="search-form">
+      <div id="breeds-list">
+        <label for="breed-input">
+          <input
+            type="text"
+            name="search-text"
+            id="breed-input"
+            class="input-form"
+            placeholder="Search images..."
+            required
+          />
+        </label>
+        <datalist id="breeds-list"></datalist>
+      </div>
+      <button type="submit" class="button-form">Search</button>
+    </form>
+    <div id="loader" class="loader">
+      <p>Loading images, please wait...</p>
+    </div>
+    <ul class="gallery"></ul>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
