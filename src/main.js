@@ -41,3 +41,15 @@ form.addEventListener('submit', async event => {
         hideLoader();
     }
 });
+
+const inputPressed = document.querySelector('.input-form');
+
+inputPressed.addEventListener('focus', () => {
+  input.classList.add('pressed');
+});
+
+inputPressed.addEventListener('blur', () => {
+  if (input.value.trim() === '') {
+    input.classList.remove('pressed');
+  }
+});
