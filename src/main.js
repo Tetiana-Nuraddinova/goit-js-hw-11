@@ -39,6 +39,8 @@ form.addEventListener('submit', async event => {
         });
     } finally {
         hideLoader();
+        input.value = '';
+        input.classList.remove('pressed');
     }
 });
 
